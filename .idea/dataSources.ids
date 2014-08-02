@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails healthcare-x: development" uuid="b54ab520-ae30-4544-9867-34f61b0d865f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails healthcare-x: test" uuid="c02e498d-2607-4c96-bacc-80116d471c42">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails healthcare-x: production" uuid="7f15ca86-9d6d-4231-a81a-aa07cbef681f">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>

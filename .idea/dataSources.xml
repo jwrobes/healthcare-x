@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="3420608346">
+    <data-source source="LOCAL" name="Rails healthcare-x: development" uuid="b54ab520-ae30-4544-9867-34f61b0d865f">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/healthcare-x_dev</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails healthcare-x: test" uuid="c02e498d-2607-4c96-bacc-80116d471c42">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/healthcare-x_test</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="Rails healthcare-x: production" uuid="7f15ca86-9d6d-4231-a81a-aa07cbef681f">
+      <driver-ref>postgresql</driver-ref>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://127.0.0.1/healthcare-x</jdbc-url>
+      <user-name>postgres</user-name>
+      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
+      <libraries />
+    </data-source>
+  </component>
+</project>
+
