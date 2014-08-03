@@ -1,7 +1,13 @@
-#footer {
-	background-color: #6C7A89;
+.footer {
+	background-color: #7f8c8d;
  	position: fixed;
   height: 100px;
   bottom: 0;
-  width: 800px;
+  width: 100%;
+}
+
+.copyright {
+	margin-top: 40px;
+	font-size: 1.1em;
+	color: #19818D;
 }

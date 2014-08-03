@@ -8,12 +8,12 @@
     <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="container">
     <%= render '/header' %>
+<div class="container">
 
     <%= yield %>
 
-    <%= render '/footer' %>
 </div>
+    <%= render '/footer' %>
 </body>
 </html>

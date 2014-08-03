@@ -41,8 +41,8 @@ ActiveRecord::Schema.define(version: 20140802223952) do
     t.float    "drug_deductable_individual_in_network"
     t.float    "medical_deductable_individual_out_of_network"
     t.float    "drug_deductable_individual_out_of_network"
-    t.float    "medical_deductable_family_in_network"
-    t.float    "drug_deductable_family_in_network"
+    t.float    "medical_detectable_family_in_network"
+    t.float    "drug_detectable_family_in_network"
     t.float    "medical_deductable_family_out_of_network"
     t.float    "drug_deductable_family_out_of_network"
     t.float    "medical_maximum_out_of_pocket_individual_in_network"
@@ -53,6 +53,14 @@ ActiveRecord::Schema.define(version: 20140802223952) do
     t.float    "drug_maximum_out_of_pocket_family_in_network"
     t.float    "medical_maximum_out_of_pocket_family_out_of_network"
     t.float    "drug_maximum_out_of_pocket_family_out_of_network"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "insurance_plans", force: true do |t|
+    t.string   "plan_type"
+    t.integer  "premium_deductable"
+    t.integer  "max_out_of_pocket"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

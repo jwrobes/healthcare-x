@@ -1,3 +1,19 @@
-.container-fluid {
+.navbar-color {
 	background-color: #19818D;
 }
+
+.active a {
+	color: #F49F24;
+}
+
+.navbar {
+  .navbar-inner {
+    background-color: #19818D;
+    background-image: none;
+  }
+}
+
+.icon-bar {
+	background-color: white;
+}
+

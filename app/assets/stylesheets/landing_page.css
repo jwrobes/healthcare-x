@@ -4,7 +4,7 @@
   text-align: center;
 }
 
- .orange {
+ .active {
 	color: #F49F24;
 }
 
@@ -13,33 +13,84 @@
 }
 
 .top-landing-header, h1 {
-	font-size: 6em;
+	font-size: 7em;
 	margin: 0px;
 	margin-bottom: 2px;
-	font-weight: 100;
+	font-weight: lighter;
 }
 
 .bottom-landing-header, h1 {
-	font-size: 6em;
+	font-size: 7em;
 	margin: 0px;
 	margin-top: -40px;
 	margin-bottom: 2px;
 	font-weight: 900;
 }
 
+.start {
+	margin: 20px;
+}
+
+.btn-active { 
+  color: #ffffff; 
+  background-color: #F49F24; 
+  border-color: #D98004; 
+} 
+ 
+.btn-active:hover, 
+.btn-active:focus, 
+.btn-active:active, 
+.btn-active.active, 
+.open .dropdown-toggle.btn-active { 
+  color: #ffffff; 
+  background-color: #F08C00; 
+  border-color: #D98004; 
+} 
+ 
+.btn-active:active, 
+.btn-active.active, 
+.open .dropdown-toggle.btn-active { 
+  background-image: none; 
+} 
+ 
+.btn-active.disabled, 
+.btn-active[disabled], 
+fieldset[disabled] .btn-active, 
+.btn-active.disabled:hover, 
+.btn-active[disabled]:hover, 
+fieldset[disabled] .btn-active:hover, 
+.btn-active.disabled:focus, 
+.btn-active[disabled]:focus, 
+fieldset[disabled] .btn-active:focus, 
+.btn-active.disabled:active, 
+.btn-active[disabled]:active, 
+fieldset[disabled] .btn-active:active, 
+.btn-active.disabled.active, 
+.btn-active[disabled].active, 
+fieldset[disabled] .btn-active.active { 
+  background-color: #F49F24; 
+  border-color: #D98004; 
+} 
+ 
+.btn-active .badge { 
+  color: #F49F24; 
+  background-color: #ffffff; 
+}
+
+
 @media(min-width:800px){
 
-		.top-landing-header, h1 {
-		font-size: 12em;
+	.top-landing-header, h1 {
+		font-size: 14em;
 		margin: 0px;
-		margin-bottom: 2px;
+		margin-bottom: 0px;
 		font-weight: 100;
 	}
 
 	.bottom-landing-header, h1 {
-		font-size: 12em;
+		font-size: 14em;
 		margin: 0px;
-		margin-top: -70px;
+		margin-top: -80px;
 		margin-bottom: 2px;
 		font-weight: 900;
 	}

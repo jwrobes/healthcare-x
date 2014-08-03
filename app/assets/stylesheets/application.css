@@ -37,6 +37,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 
 body {
     line-height: 1;
+    background-color: #F2F2F2;
 }
 
 ol, ul {
@@ -84,11 +85,10 @@ table td {
 
 /* Layout */
 
-#container {
+/*.container {
     width: 800px;
     margin: 0 auto;
-    min-height: 400px;
-}
+}*/
 
 #header {
     width: 800px;

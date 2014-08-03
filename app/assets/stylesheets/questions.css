@@ -1,0 +1,9 @@
+.questions {
+	margin: 10px;
+	padding: 20px;
+}
+
+.questions, p {
+	font-size: 1.2em;
+	margin: 10px;
+}
