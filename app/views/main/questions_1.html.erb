@@ -1,23 +1,35 @@
-<!--   First page of Questions -->
 <div class="questions">
     <%= form_tag("/main/post_answers_1", method: "post", class: "form-group") do %>
+        <input type="hidden" name="id" value="<%= @answer_set.id %>">
+
         <p>
             <%= label_tag "What is your age?" %><br/>
             <%= text_field_tag :age %>
         </p>
 
+        <p>
+            <%= label_tag "Gender?" %><br/>
+            <%= radio_button_tag("gender", "Male", checked = true) %> Male
+            <%= radio_button_tag("gender", "Female") %> Female
+        </p>
+
+        <p>
+            <%= label_tag "marital_status?" %><br/>
+            <%= radio_button_tag("marital_status", "single", checked = true) %> Single
+            <%= radio_button_tag("marital_status", "married") %> Married
+        </p>
+
         <p class="form-group">
             <%= label_tag "I getting insurance for" %><br/>
-            <%= select_tag("scope_type", options_for_select(
-                    [['Just Me', '1'],
-                     ['My self and family', '2'],
-                     ['My self and children', '3']], '3'), {class: "form-control"}) %>
+            <%= select_tag("scope", options_for_select(
+                    [['Individual', '1'],
+                     ['Family', '2']], '1'), {class: "form-control"}) %>
         </p>
 
         <p>
             <%= label_tag "Do you smoke?" %><br/>
-            <%= radio_button_tag("smoke", "0", "no") %> No
-            <%= radio_button_tag("smoke", "1", "yes") %> Yes
+            <%= radio_button_tag("smoker", "0", checked = true) %> No
+            <%= radio_button_tag("smoker", "1") %> Yes
         </p>
 
         <p>
