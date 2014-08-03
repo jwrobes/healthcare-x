@@ -9,6 +9,6 @@ class CreateAnswerSets < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :answers, :user_id
+    add_index :answer_sets, :user_id
   end
 end

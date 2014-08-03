@@ -5,7 +5,7 @@ class MainController < ApplicationController
   end
 
   def questions_1
-    @answers = AnswerSet.new
+    @answer_set = AnswerSet.new
   end
 
   def post_answers1

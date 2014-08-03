@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20140802223952) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "answers", force: true do |t|
+  create_table "answer_sets", force: true do |t|
     t.integer  "age"
     t.string   "scope"
     t.boolean  "smoker"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20140802223952) do
     t.datetime "updated_at"
   end
 
-  add_index "answers", ["user_id"], name: "index_answers_on_user_id", using: :btree
+  add_index "answer_sets", ["user_id"], name: "index_answer_sets_on_user_id", using: :btree
 
   create_table "health_plans", force: true do |t|
     t.string   "state"
