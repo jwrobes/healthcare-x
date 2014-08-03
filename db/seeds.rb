@@ -22,8 +22,8 @@ HealthPlan.create(
     medical_deductable_individual_out_of_network: 12500.0,
     drug_deductable_individual_out_of_network: 0.0,
 
-    medical_detectable_family_in_network: 6800.0,
-    drug_detectable_family_in_network: 0.0,
+    medical_deductable_family_in_network: 6800.0,
+    drug_deductable_family_in_network: 0.0,
     medical_deductable_family_out_of_network: 25000.0,
     drug_deductable_family_out_of_network: 0.0,
 
