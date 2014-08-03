@@ -1,31 +1,20 @@
 
 <%= form_tag("/main/post_answers_3", method: "post", id: "nl-form", class: "nl-form") do %>
-        I feel like eating 
-        <select>
-            <option value="1" selected>any food</option>
-            <option value="2">Indian</option>
-            <option value="3">French</option>
-            <option value="4">Japanese</option>
-            <option value="2">Italian</option>
+        <input type="hidden" name="id" value="<%= @answer_set.id %>">
+        I have
+        <select name="preferred_doctor">
+            <option value="1" selected>one favorite doctor</option>
+            <option value="0">no preferred doctor</option>
         </select>
-        <br />in a
-        <select>
-            <option value="1" selected>standard</option>
-            <option value="2">fancy</option>
-            <option value="3">hip</option>
-            <option value="4">traditional</option>
-            <option value="2">fine</option>
+        and I take 
+        <select name="number_of_prescription_drugs">
+            <option value="1" selected>1 prescription drug</option>
+            <option value="0">no prescription drugs</option>
         </select>
-        restaurant
-        <select>
-            <option value="1" selected>anytime</option>
-            <option value="1">at 7 p.m.</option>
-            <option value="2">at 8 p.m.</option>
-            <option value="3">at 9 p.m.</option>
-        </select>
-        in <input type="text" value="" placeholder="any city" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>"/>
+        .
         <div class="nl-submit-wrap">
-            <button class="nl-submit" type="submit">Find a restaurant</button>
+            <button class="nl-submit" type="submit">Next Question</button>
         </div>
         <div class="nl-overlay"></div>
     <% end %>
+
