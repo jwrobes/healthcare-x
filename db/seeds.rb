@@ -21,21 +21,16 @@ HealthPlan.create(
     drug_deductable_individual_in_network: 0.0,
     medical_deductable_individual_out_of_network: 12500.0,
     drug_deductable_individual_out_of_network: 0.0,
-
     medical_deductable_family_in_network: 6800.0,
     drug_deductable_family_in_network: 0.0,
     medical_deductable_family_out_of_network: 25000.0,
     drug_deductable_family_out_of_network: 0.0,
-
     medical_maximum_out_of_pocket_individual_in_network: 6350.0,
     drug_maximum_out_of_pocket_individual_in_network: 0.0,
-
     medical_maximum_out_of_pocket_individual_out_of_network: 25000.0,
     drug_maximum_out_of_pocket_individual_out_of_network: 0.0,
-
     medical_maximum_out_of_pocket_family_in_network: 12700.0,
     drug_maximum_out_of_pocket_family_in_network: 0.0,
-
     medical_maximum_out_of_pocket_family_out_of_network: 50000.0,
     drug_maximum_out_of_pocket_family_out_of_network: 0.0)
 
