@@ -1,29 +1,27 @@
 <div>
     <h2>Your Recommendations</h2>
 </div>
-<div class="row" style="background: #eee">
+<div class="row" style="background: #eee; margin-bottom: 20px">
     <div class="col-md-6 col-sm-6">
-        <h3>Calculated Premium: <span class="active">$<%= @premium %></span></h3>
         <h4>Based on family status: <%= @answer_set.marital_status %></h4>
+        <h4>Based on age: <%= @answer_set.age %></h4>
+        <h4>Based on state: Florida, Rating Area 8</h4>
     </div>
 </div>
 
 <div class="row">
-    <% @health_plans.each do |health_plan| %>
+    <% @score_tuples.each do |score_tuple| %>
         <div class="panel panel-default plan-name" style="border: 1px solid darkblue">
             <div class="panel-heading">
                 <%= image_tag "Blue-Cross-logo-copy_0_cropped_small.jpg" %>
                 <span style="font-weight:bold">
-                    <%= health_plan.plan_marketing_name %> (<%= health_plan.plan_type %>)
+                    <%= score_tuple[1].plan_marketing_name %> (<%= score_tuple[1].plan_type %>)
                </span>
             </div>
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <h3>Annual Savings: <span class="active">$475</span></h3>
-                    </div>
-                    <div class="col-md-6 col-sm-6">
-                        <h3>True Total Cost of Care: <span class="active">$2030</span></h3>
+                        <h3>True Total Cost of Care: <span class="active"><%= score_tuple[0] %></span></h3>
                     </div>
                 </div>
             </div>
