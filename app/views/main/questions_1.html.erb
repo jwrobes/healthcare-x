@@ -3,33 +3,34 @@
         <input type="hidden" name="id" value="<%= @answer_set.id %>">
 
         <p>
-            <%= label_tag "What is your age?" %><br/>
-            <%= text_field_tag :age %>
+            I am a
+            <select name="gender">
+                <option>male</option>
+                <option>female</option>
+            </select>, age <%= text_field_tag :age %>.
         </p>
 
         <p>
-            <%= label_tag "Gender?" %><br/>
-            <%= radio_button_tag("gender", "Male", checked = true) %> Male
-            <%= radio_button_tag("gender", "Female") %> Female
+            I am
+            <select name="marital_status">
+                <option value="single">single</option>
+                <option value="married">married</option>
+            </select>.
         </p>
 
         <p>
-            <%= label_tag "marital_status?" %><br/>
-            <%= radio_button_tag("marital_status", "single", checked = true) %> Single
-            <%= radio_button_tag("marital_status", "married") %> Married
-        </p>
-
-        <p class="form-group">
-            <%= label_tag "I getting insurance for" %><br/>
+            I getting insurance for
             <%= select_tag("scope", options_for_select(
                     [['Individual', '1'],
-                     ['Family', '2']], '1'), {class: "form-control"}) %>
+                     ['Family', '2']], '1')) %>
         </p>
 
         <p>
-            <%= label_tag "Do you smoke?" %><br/>
-            <%= radio_button_tag("smoker", "0", checked = true) %> No
-            <%= radio_button_tag("smoker", "1") %> Yes
+            I
+            <select name="smoker">
+                <option value="0">don't smoke</option>
+                <option value="1">smoke</option>
+            </select>.
         </p>
 
         <p>
