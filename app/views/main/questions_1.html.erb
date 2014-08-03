@@ -9,8 +9,10 @@
 
         <p>
             <%= label_tag "I getting insurance for" %><br/>
-            <%= select_tag("scope_type", options_for_select([['Just Me', '1'],
-                                                             ['My self and family', '2'], ['My self and children', '3']], '3')) %>
+            <%= select_tag("scope_type", options_for_select(
+                    [['Just Me', '1'],
+                     ['My self and family', '2'],
+                     ['My self and children', '3']], '3')) %>
         </p>
 
         <p>
