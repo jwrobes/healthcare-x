@@ -1,11 +1,14 @@
-<div>
-	<div class="intro">
-    <h1 class="orange-header" style="font-weight: light">health</h1>
-    <h1 class="blue-header">insured</h1> 
-  </div>  
+<div class="row holder">
+	<div class="intro col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-2">
+    <h1 class="top-landing-header"><span class="orange">&nbsphealth</span></h1>
+    <h1 class="bottom-landing-header blue">insured</h1> 
+ 
+	 <div class="center-block">
     <%= link_to "Get Started", controller: "main", action: "questions_1", class: "btn btn-default" %>
     <h3>Have you saved your plans?</h3>
-    <%= link_to "Sign In", new_user_session_path, class: "btn btn-default" %>
+    <%= link_to "Sign In", new_user_session_path, class: "btn btn-default" %> 
+  	</div>
+  </div> 
 </div>
 
    

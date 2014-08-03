@@ -1,6 +1,10 @@
 
 
- .navbar-nav li a {
+.intro {
+  text-align: center;
+}
+
+ .orange {
 	color: #F49F24;
 }
 
@@ -8,18 +12,42 @@
 	color: #19818D;
 }
 
-.orange-header, h1 {
+.top-landing-header, h1 {
 	font-size: 6em;
-	color: #F49F24;
-	margin-top: 2px;
+	margin: 0px;
 	margin-bottom: 2px;
-	font-weight: 300;
+	font-weight: 100;
+}
+
+.bottom-landing-header, h1 {
+	font-size: 6em;
+	margin: 0px;
+	margin-top: -40px;
+	margin-bottom: 2px;
+	font-weight: 900;
+}
+
+@media(min-width:800px){
+
+		.top-landing-header, h1 {
+		font-size: 12em;
+		margin: 0px;
+		margin-bottom: 2px;
+		font-weight: 100;
+	}
+
+	.bottom-landing-header, h1 {
+		font-size: 12em;
+		margin: 0px;
+		margin-top: -70px;
+		margin-bottom: 2px;
+		font-weight: 900;
+	}
 
 }
 
-.blue-header, h1 {
-	font-size: 6em;
-	color: #19818D;
-	margin-top: 2px;
-	margin-bottom: 2px;
+@media(max-width:800px){
+  #container {
+    width: 100%;
+  }
 }
