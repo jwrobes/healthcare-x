@@ -14,6 +14,9 @@
 }
 
 .icon-bar {
-	background-color: white;
+	background-color: #F49F24;
 }
 
+.navbar, li, a {
+	font-size: 1.2em;
+}
