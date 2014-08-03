@@ -1,8 +1,18 @@
 <div>
-    Questions 2
+    Second page of Questions
+    <br>
+    <%= form_tag("/main/post_answers_2", method: "post") do %>
+        <p>
+            <%= label_tag "What is your risk threshold?" %><br/>
+            <%= text_field_tag :risk_threshold %>
+        </p>
+
+        <p>
+            <%= submit_tag "Continue" %>
+        </p>
+    <% end %>
 </div>
 
-<%= link_to "Recommendations", controller: "main", action: "recommendations" %>
 
 
    

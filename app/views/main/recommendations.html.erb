@@ -6,15 +6,19 @@
         Summary of the Plan
     </div>
     <div class="col-md-7" style="border: 1px solid black">
-        The details of the plan go here
-        <table>
-            <tr>
-                <td>Name: HealthMaster</td>
-            </tr>
-            <tr>
-                <td>Savings: $475 annually</td>
-            </tr>
-        </table>
+        <% @health_plans.each do |health_plan| %>
+            <table>
+                <tr>
+                    <td>Name: <%= health_plan.plan_marketing_name %> (<%= health_plan.plan_type %>)</td>
+                </tr>
+                <tr>
+                    <td>Premium for Age 27: $<%= health_plan.premium_adult_individual_age_27 %></td>
+                </tr>
+                <tr>
+                    <td>Savings: $475 annually</td>
+                </tr>
+            </table>
+        <% end %>
     </div>
 </div>
 

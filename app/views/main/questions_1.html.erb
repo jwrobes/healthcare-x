@@ -1,9 +1,30 @@
 <div>
-    Questions 1
-	
+    First page of Questions
+    <br>
+    <%= form_tag("/main/post_answers_1", method: "post") do %>
+        <p>
+            <%= label_tag "What is your age?" %><br/>
+            <%= text_field_tag :age %>
+        </p>
 
+        <p>
+            <%= label_tag "I getting insurance for" %><br/>
+            <%= select_tag("scope_type", options_for_select(
+                    [['Just Me', '1'],
+                     ['My self and family', '2'],
+                     ['My self and children', '3']], '3')) %>
+        </p>
 
+        <p>
+            <%= label_tag "Do you smoke?" %><br/>
+            <%= radio_button_tag("post", "smoke", "no") %> No
+            <%= radio_button_tag("post", "smoke", "yes") %> Yes
+        </p>
+
+        <p>
+            <%= submit_tag "Continue" %>
+        </p>
+    <% end %>
 </div>
-<%= link_to	"Continue", controller: "main", action: "questions_2" %>
 
    
