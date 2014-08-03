@@ -1,4 +1,4 @@
-class HeathPlan < ActiveRecord::Base
+class HealthPlan < ActiveRecord::Base
 
   #attr_accessible
   # :state,    -- not really used
