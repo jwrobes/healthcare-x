@@ -1,34 +1,35 @@
 <div>
     <h2>Your Recommendations</h2>
 </div>
+<div class="row" style="background: #eee">
+    <div class="col-md-6 col-sm-6">
+        <h3>Calculated Premium: <span class="active">$<%= @premium %></span></h3>
+        <h4>Based on family status: <%= @answer_set.marital_status %></h4>
+    </div>
+</div>
+
 <div class="row">
-    <!--   <div class="col-sm-8" style="border: 1px solid black"> -->
     <% @health_plans.each do |health_plan| %>
         <div class="panel panel-default plan-name" style="border: 1px solid darkblue">
             <div class="panel-heading">
-            	<%= image_tag "Blue-Cross-logo-copy_0_cropped_small.jpg" %>
-               <span style="font-weight:bold">
+                <%= image_tag "Blue-Cross-logo-copy_0_cropped_small.jpg" %>
+                <span style="font-weight:bold">
                     <%= health_plan.plan_marketing_name %> (<%= health_plan.plan_type %>)
                </span>
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-md-4 col-sm-4">
+                    <div class="col-md-6 col-sm-6">
                         <h3>Annual Savings: <span class="active">$475</span></h3>
                     </div>
-                    <div class="col-md-4 col-sm-4"><h3>
-                        Premium for Age 27:
-                        <span class="active">$<%= health_plan.premium_adult_individual_age_27 %></span></h3>
-                    </div>
-                    <div class="col-md-4 col-sm-4"><h3>
-                        True Total Cost of Care: <span class="active">$2030</span></h3>
+                    <div class="col-md-6 col-sm-6">
+                        <h3>True Total Cost of Care: <span class="active">$2030</span></h3>
                     </div>
                 </div>
             </div>
 
         </div>
     <% end %>
-    <!--     </div> -->
 </div>
 
    
