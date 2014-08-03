@@ -20,12 +20,19 @@
             </div>
             <div class="panel-body">
                 <div class="row">
-                    <div class="col-md-6 col-sm-6">
-                        <h3>True Total Cost of Care: <span class="active"><%= score_tuple[0] %></span></h3>
+                    <div class="col-md-4 col-sm-4" style="font-weight: bold">
+                        Premium: <span class="active"><%= score_tuple[1].premium_adult_individual_age_27 %></span>
+                    </div>
+                    <div class="col-md-4 col-sm-4" style="font-weight: bold">
+                        Max Out of Pocket:
+                        <span class="active"><%= score_tuple[1].medical_maximum_out_of_pocket_individual_in_network %></span>
+                    </div>
+                    <div class="col-md-4 col-sm-4" style="font-weight: bold">
+                        True Total Cost of Care:
+                        <span class="active"><%= score_tuple[0] %></span>
                     </div>
                 </div>
             </div>
-
         </div>
     <% end %>
 </div>

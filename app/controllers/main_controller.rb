@@ -118,7 +118,6 @@ class MainController < ApplicationController
       drugs_max_OOP_factor = 0.5 + (0.5 * @number_of_prescription_drugs / 2)
 
       total_cost = annual_premium + medical_max_OOP*medical_max_OOP_factor + drugs_max_OOP*drugs_max_OOP_factor
-      puts total_cost
       score_tuple = [total_cost, health_plan]
       temp_score_tuples.append(score_tuple)
     end
@@ -128,7 +127,7 @@ class MainController < ApplicationController
 
     @score_tuples = []
     for score_tuple in temp_score_tuples do
-      @score_tuples.append(score_tuple) if @score_tuples.length < 5
+      @score_tuples.append(score_tuple) if @score_tuples.length < 6
     end
   end
 end
