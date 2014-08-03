@@ -13,8 +13,8 @@ development:
 test:
   adapter: postgresql
   host: localhost
-  username: postgres
-  password: 123456
+  username: 
+  password: 
   database: healthcare-x_test
   pool: 5
   timeout: 5000
