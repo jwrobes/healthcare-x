@@ -10,4 +10,9 @@ Rails.application.routes.draw do
 
   get "main/recommendations" => "main#recommendations"
 
+  #controller :main do
+  #post '/post_answers1', to: 'post_answers1', as: 'post_answers'
+  #post '/post_answers1', to: 'post_answers1', as: 'answers_index'
+  #end
+
 end

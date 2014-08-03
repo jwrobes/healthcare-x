@@ -5,6 +5,10 @@ class MainController < ApplicationController
   end
 
   def questions_1
+    @answers = Answers.new
+  end
+
+  def post_answers1
 
   end
 
@@ -16,6 +20,5 @@ class MainController < ApplicationController
 
   end
 
-	
 
 end
