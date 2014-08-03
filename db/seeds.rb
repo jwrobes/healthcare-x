@@ -38,4 +38,3 @@ HealthPlan.create(
 
     medical_maximum_out_of_pocket_family_out_of_network: 50000.0,
     drug_maximum_out_of_pocket_family_out_of_network: 0.0)
-

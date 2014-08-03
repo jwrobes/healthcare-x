@@ -3,17 +3,18 @@
 <head>
     <title>HealthcareX</title>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <%= csrf_meta_tags %>
 </head>
 <body>
-<div id="container">
     <%= render '/header' %>
+<div class="container">
 
     <%= yield %>
 
-    <%= render '/footer' %>
 </div>
+    <%= render '/footer' %>
 </body>
 </html>
-

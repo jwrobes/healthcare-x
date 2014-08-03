@@ -32,10 +32,12 @@ table, caption, tbody, tfoot, thead, tr, th, td {
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
     line-height: 1;
+    background-color: #F2F2F2;
 }
 
 ol, ul {
@@ -83,11 +85,10 @@ table td {
 
 /* Layout */
 
-#container {
+/*.container {
     width: 800px;
     margin: 0 auto;
-    min-height: 400px;
-}
+}*/
 
 #header {
     width: 800px;

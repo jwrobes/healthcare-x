@@ -1,0 +1,23 @@
+.footer {
+	background-color: #7f8c8d;
+ 	position: fixed;
+  height: 90px;
+  bottom: 0;
+  width: 100%;
+}
+.copyright {
+	margin-top: 35px;
+	font-size: 1.2em;
+	color: #19818D;
+}
+
+@media(max-width:800px){
+  .footer {
+    height: 50px;
+  }
+  .copyright {
+  text-align: center;
+	margin-top: 10px;
+	font-size: 1.1em;
+	color: #19818D;
+}

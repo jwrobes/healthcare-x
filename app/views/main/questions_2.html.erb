@@ -1,14 +1,16 @@
-<div>
-    Second page of Questions
+<div class="questions">
+<!--     Second page of Questions -->
     <br>
-    <%= form_tag("/main/post_answers_2", method: "post") do %>
+    <%= form_tag("/main/post_answers_2", method: "post", class: "form-group") do %>
         <p>
-            <%= label_tag "What is your risk threshold?" %><br/>
-            <%= text_field_tag :risk_threshold %>
+            <%= label_tag "What is your risk threshold?" %>
+            <div>
+                <%= text_field_tag :risk_threshold, nil, {class: 'input-large'} %>
+            </div>
         </p>
 
         <p>
-            <%= submit_tag "Continue" %>
+            <%= submit_tag "Continue", class: "btn btn-default btn-lg" %>
         </p>
     <% end %>
 </div>
