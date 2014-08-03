@@ -3,10 +3,10 @@ require 'csv'
 desc 'Imports CSV file into Active Record Table'
 namespace :import do
   task :insurance_data => :environment do
- 		csv_insurance = File.read('insurance_data.csv')
+ 		csv_insurance = File.open('insurance_data_clean3.csv',"r:ISO-8859-1")
  		csv = CSV.parse(csv_insurance, :headers => true)
  		csv.each do |row|
- 			InsurancePlan.create!(row.to_hash)
+ 			HealthPlan.create!(row.to_hash)
   	end
   end
 end
