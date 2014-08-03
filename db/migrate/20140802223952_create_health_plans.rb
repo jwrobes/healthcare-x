@@ -16,8 +16,8 @@ class CreateHealthPlans < ActiveRecord::Migration
       t.float :medical_deductable_individual_out_of_network
       t.float :drug_deductable_individual_out_of_network
 
-      t.float :medical_detectable_family_in_network
-      t.float :drug_detectable_family_in_network
+      t.float :medical_deductable_family_in_network
+      t.float :drug_deductable_family_in_network
       t.float :medical_deductable_family_out_of_network
       t.float :drug_deductable_family_out_of_network
 

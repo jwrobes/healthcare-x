@@ -1,4 +1,4 @@
-class HeathPlan < ActiveRecord::Base
+class HealthPlan < ActiveRecord::Base
 
   #attr_accessible
   # :state,    -- not really used
@@ -16,8 +16,8 @@ class HeathPlan < ActiveRecord::Base
   # :medical_deductable_individual_out_of_network
   # :drug_deductable_individual_out_of_network
 
-  # :medical_detectable_family_in_network,
-  # :drug_detectable_family_in_network,
+  # :medical_deductable_family_in_network,
+  # :drug_deductable_family_in_network,
   # :medical_deductable_family_out_of_network,
   # :drug_deductable_family_out_of_network,
 

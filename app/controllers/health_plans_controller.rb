@@ -1,7 +1,7 @@
 class AnswerSetsController < ApplicationController
 
   def index
-   @health_plans = HealthPlans.all
+   @health_plans = HealthPlan.all
   end
 
 end

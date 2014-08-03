@@ -10,13 +10,11 @@ Rails.application.routes.draw do
 
   get "main/questions_1" => "main#questions_1"
 
+  post "main/post_answers_1" => "main#post_answers_1"
+
   get "main/questions_2" => "main#questions_2"
 
+  post "main/post_answers_2" => "main#post_answers_2"
+
   get "main/recommendations" => "main#recommendations"
-
-  #controller :main do
-  #post '/post_answers1', to: 'post_answers1', as: 'post_answers'
-  #post '/post_answers1', to: 'post_answers1', as: 'answers_index'
-  #end
-
 end
