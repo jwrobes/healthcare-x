@@ -1,13 +1,20 @@
-
 class MainController < ApplicationController
 
-	def index
+  def index
 
-	end
+  end
 
-	def questions_1
+  def questions_1
 
-	end
+  end
+
+  def questions_2
+
+  end
+
+  def recommendations
+
+  end
 
 	
 
