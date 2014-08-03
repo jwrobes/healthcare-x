@@ -1,10 +1,11 @@
-class CreateAnswers < ActiveRecord::Migration
+class CreateAnswerSets < ActiveRecord::Migration
   def change
-    create_table :answers do |t|
+    create_table(:answer_sets) do |t|
       t.integer :age
       t.string :scope
       t.boolean :smoker
       t.references :user
+      t.float :risk_tolerance
 
       t.timestamps
     end

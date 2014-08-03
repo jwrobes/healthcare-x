@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  resources :answer_sets
+
+  resources :health_plans
+
   root to: 'main#index'
 
   get "main/questions_1" => "main#questions_1"
