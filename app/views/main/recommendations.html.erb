@@ -4,11 +4,12 @@
 <div class="row">
     <!--   <div class="col-sm-8" style="border: 1px solid black"> -->
     <% @health_plans.each do |health_plan| %>
-        <div class="panel panel-default plan-name">
+        <div class="panel panel-default plan-name" style="border: 1px solid darkblue">
             <div class="panel-heading">
-                <h4>
+            	<%= image_tag "Blue-Cross-logo-copy_0_cropped_small.jpg" %>
+               <span style="font-weight:bold">
                     <%= health_plan.plan_marketing_name %> (<%= health_plan.plan_type %>)
-                </h4>
+               </span>
             </div>
             <div class="panel-body">
                 <div class="row">
