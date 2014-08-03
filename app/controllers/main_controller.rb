@@ -10,6 +10,9 @@ class MainController < ApplicationController
 
   def post_answers_1
     # save information
+    puts params['age']
+    puts params['scope_type']
+    puts params['smoke']
 
     #redirect to "questions_2"
     redirect_to action: 'questions_2'

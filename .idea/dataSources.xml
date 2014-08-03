@@ -13,8 +13,6 @@
       <driver-ref>postgresql</driver-ref>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://127.0.0.1/healthcare-x_test</jdbc-url>
-      <user-name>postgres</user-name>
-      <user-password>df9bdf98df99df9edf9fdf9c</user-password>
       <libraries />
     </data-source>
     <data-source source="LOCAL" name="Rails healthcare-x: production" uuid="7f15ca86-9d6d-4231-a81a-aa07cbef681f">
