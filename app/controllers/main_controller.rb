@@ -17,7 +17,7 @@ class MainController < ApplicationController
   end
 
   def recommendations
-
+    @health_plans = HealthPlan.all
   end
 
 
