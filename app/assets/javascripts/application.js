@@ -15,3 +15,6 @@
 //= require bootstrap
 //= require turbolinks
 //= require_tree .
+//
+//= modernizr.custom.js
+//= nlform.js
