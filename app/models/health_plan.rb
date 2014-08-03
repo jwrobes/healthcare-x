@@ -6,7 +6,7 @@ class HealthPlan < ActiveRecord::Base
   # :plan_type,  #   -- required
   # :rating_area, #   -- not really used
 
-  # # :premium_adult_individual_age_27
+  # :premium_adult_individual_age_27
   # :premium_adult_individual_age_50,
   # :premium_family_age_30,
   
