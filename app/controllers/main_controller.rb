@@ -63,6 +63,9 @@ class MainController < ApplicationController
 
     first_plan = @health_plans[0]
     @premium = first_plan['premium_adult_individual_age_27']
+    if (@age > 27)
+      @premium = first_plan['premium_adult_individual_age_50']
+    end
     if (@marital_status == 'married')
       @premium = first_plan['premium_family_age_30']
     end
