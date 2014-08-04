@@ -1,29 +1,40 @@
 <div>
     <h2>Your Recommendations</h2>
 </div>
+<div class="row" style="background: #eee; margin-bottom: 20px">
+    <div class="col-md-6 col-sm-6">
+        <h4>Based on family status: <%= @answer_set.marital_status %></h4>
+        <h4>Based on age: <%= @answer_set.age %></h4>
+        <h4>Based on state: Florida, Rating Area 8</h4>
+    </div>
+</div>
+
 <div class="row">
-  <!--   <div class="col-sm-8" style="border: 1px solid black"> -->
-    <% @health_plans.each do |health_plan| %>
-        <div class="panel panel-default plan-name">
-        <div class="panel-heading">
-        <h4>
-            <%= health_plan.plan_marketing_name %> (<%= health_plan.plan_type %>)
-         </h4>
-        </div>
-        <div class="panel-body">
-        <div class="row">
-            <div class="col-md-6 col-sm-6">
-             <h3>Annual Savings: <span class="active">$475</span></h3>
+    <% @score_tuples.each do |score_tuple| %>
+        <div class="panel panel-default plan-name" style="border: 1px solid darkblue">
+            <div class="panel-heading">
+                <%= image_tag "Blue-Cross-logo-copy_0_cropped_small.jpg" %>
+                <span style="font-weight:bold">
+                    <%= score_tuple[1].plan_marketing_name %> (<%= score_tuple[1].plan_type %>)
+               </span>
             </div>
-            <div class="col-md-6 col-sm-6"><h3>
-                Premium for Age 27: <span class="active">$<%= health_plan.premium_adult_individual_age_27 %></span></h3>
+            <div class="panel-body">
+                <div class="row">
+                    <div class="col-md-4 col-sm-4" style="font-weight: bold">
+                        Premium: <span class="active"><%= score_tuple[1].premium_adult_individual_age_27 %></span>
+                    </div>
+                    <div class="col-md-4 col-sm-4" style="font-weight: bold">
+                        Max Out of Pocket:
+                        <span class="active"><%= number_to_currency(score_tuple[1].medical_maximum_out_of_pocket_individual_in_network, precision: 0) %></span>
+                    </div>
+                    <div class="col-md-4 col-sm-4" style="font-weight: bold">
+                        True Total Cost of Care:
+                        <span class="active">$<%= number_to_currency(score_tuple[0], precision: 0) %></span>
+                    </div>
+                </div>
             </div>
-        </div>
-        </div>
-       
         </div>
     <% end %>
-<!--     </div> -->
 </div>
 
    
