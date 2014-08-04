@@ -61,11 +61,7 @@
 .nl-form select  {
 	line-height: inherit;
 	display: inline-block;
-<<<<<<< HEAD
-	color: #b14943
-=======
 	color: #b14943;
->>>>>>> master
 	cursor: pointer;
 	border-bottom: 1px dashed #b14943;
 }
@@ -226,13 +222,9 @@ input:focus::-ms-input-placeholder {
 	text-transform: uppercase;
 	cursor: pointer;
 	position: relative;
-<<<<<<< HEAD
 	background: #F49F24;
-=======
-	background: #76C3BD;
->>>>>>> master
 	color: #fff;
-	padding: 0 1em 0 0;
+	padding: 0 1eFm 0 0;
 	font-size: 40%;
 	font-weight: bold;
 	letter-spacing: 3px;
@@ -244,11 +236,7 @@ input:focus::-ms-input-placeholder {
 	float: left;
 	padding: 0 0.7em;
 	margin: 0 0.8em 0 0;
-<<<<<<< HEAD
 	background: #F49F24;
-=======
-	background: #69B1A9;
->>>>>>> master
 }
 
 .no-touch .nl-form .nl-submit:hover,
