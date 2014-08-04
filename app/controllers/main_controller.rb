@@ -114,7 +114,7 @@ class MainController < ApplicationController
     answer_set['procedure_planned'] = (params['procedure_planned'] == "1")
     answer_set['smoker'] = params['smoker']
     answer_set.save()
-    
+
     #redirect to "questions 5"
     redirect_to action: 'questions_6', id: id
   end
@@ -129,7 +129,7 @@ class MainController < ApplicationController
   def post_answers_6
     # save information
     #redirect to "questions_2"
-      redirect_to action: 'recommendations'
+    redirect_to action: 'recommendations'
   end
 
 
@@ -193,8 +193,8 @@ class MainController < ApplicationController
       medical_max_OOP = 0.0 if medical_max_OOP == nil
       drugs_max_OOP = 0.0 if drugs_max_OOP == nil
 
-      medical_max_OOP_factor = 0.5 + (0.5 * @number_of_visits / 4)
-      drugs_max_OOP_factor = 0.5 + (0.5 * @number_of_prescription_drugs / 2)
+      medical_max_OOP_factor = 0.5 + (0.5 * @number_of_visits / 4.0)
+      drugs_max_OOP_factor = 0.5 + (0.5 * @number_of_prescription_drugs / 2.0)
 
       total_cost = annual_premium + medical_max_OOP*medical_max_OOP_factor + drugs_max_OOP*drugs_max_OOP_factor
       score_tuple = [total_cost, health_plan]

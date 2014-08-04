@@ -21,11 +21,25 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-4" style="font-weight: bold">
                         Monthly Premium:
-                        <span class="active"><%= score_tuple[1].premium_adult_individual_age_27 %></span>
+                        <span class="active">
+                            <% if @answer_set.marital_status == 'single' %>
+                              <%= score_tuple[1].premium_adult_individual_age_27 %>
+                            <% end %>
+                            <% if @answer_set.marital_status == 'married' %>
+                              <%= score_tuple[1].premium_family_age_30 %>
+                            <% end %>
+                        </span>
                     </div>
                     <div class="col-md-4 col-sm-4" style="font-weight: bold">
                         Max Out of Pocket:
-                        <span class="active"><%= number_to_currency(score_tuple[1].medical_maximum_out_of_pocket_individual_in_network, precision: 0) %></span>
+                        <span class="active">
+                            <% if @answer_set.marital_status == 'single' %>
+                              <%= number_to_currency(score_tuple[1].medical_maximum_out_of_pocket_individual_in_network, precision: 0) %>
+                            <% end %>
+                            <% if @answer_set.marital_status == 'married' %>
+                              <%= number_to_currency(score_tuple[1].medical_maximum_out_of_pocket_family_in_network, precision: 0) %>
+                            <% end %>
+                        </span>
                     </div>
                     <div class="col-md-4 col-sm-4" style="font-weight: bold">
                         True Total Cost of Care:
