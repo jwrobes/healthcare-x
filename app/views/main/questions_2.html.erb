@@ -1,57 +1,12 @@
-<div class="questions">
-    <%= form_tag("/main/post_answers_2", method: "post", class: "form-group") do %>
+
+<%= form_tag("/main/post_answers_2", method: "post", id: "nl-form", class: "nl-form") do %>
         <input type="hidden" name="id" value="<%= @answer_set.id %>">
-
-        <p>I'm a <%= @answer_set.age %> year old <%= @answer_set.gender %>.
-            I'm <%= @answer_set.marital_status %>.</p>
-
-        <p>I have an estimated annual household income of
-            <input type="text" name="household_income" value="70000"/>
-            .</p>
-
-        <p>I have
-            <select name="preferred_doctor">
-                <option value="1">a favorite doctor</option>
-                <option value="0">no preferred doctor</option>
-            </select>
-            and I take
-            <select name="number_of_prescription_drugs">
-                <option value="1">1 prescription drug</option>
-                <option value="0">no prescription drugs</option>
-            </select>.
-        </p>
-
-        <p>I have an
-            <select name="illness">
-                <option value="0">ongoing illness</option>
-                <option value="1">no ongoing illness</option>
-            </select>
-            and usually see a doctor
-            <select name="number_of_visits">
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-            </select>
-            times per year.
-        </p>
-
-        <p>I'm planning to get
-            <select name="procedure_planned">
-                <option value="0">no procedures</option>
-                <option value="1">a medical procedure</option>
-            </select>
-            done in the next 12 months.
-        </p>
-
-        <p>
-            <%= submit_tag "Continue", class: "btn btn-default btn-lg" %>
-        </p>
-    <% end %>
-</div>
-
-
-
+        I have an estimated annual household income of 
+        <input type="text" value="70000" placeholder="income" name="household_income" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>" style="width: 3.5em"/>
+        .
+        <div class="nl-submit-wrap">
+        <br/>
+            <button class="nl-submit" type="submit">Next Question</button>
+        </div>
+        <div class="nl-overlay"></div>
+    <% end %>   

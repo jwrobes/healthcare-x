@@ -1,0 +1,44 @@
+<div class=result>
+    <p> You are a <%= @answer_set.age %> year old <%= @answer_set.gender %>.
+   You are <%= @answer_set.marital_status %>. 
+        You <% if @answer_set.scope == 1 %>
+            are looking or insurance for an individual.
+        <% else %>
+            are looking for insurance for your family.    
+        <% end %>
+          You have an annual income of $<%= @answer_set.household_income %>.  You have 
+        <% if  @answer_set.preferred_doctor == 1 %>
+            one favorite doctor.
+        <% else %>
+            no preferred doctor.    
+        <% end %>
+         You 
+        <% if @answer_set.number_of_prescription_drugs == 1 %>
+            take prescription drugs.
+        <% else %>
+            take no prescription drugs.
+        <% end %>   
+        You have 
+        <% if @answer_set.illness == 1 %>
+            have an ongoing illness.
+        <% else %>
+            do not have an ongoing illness
+        <% end %>
+        and usually see a doctor <%= @answer_set.number_of_visits %> time(s) a year.
+        You 
+        <% if @answer_set.procedure_planned == 1 %>
+            are planning to get a procedure.
+        <% else %>
+            are not planning to get a procedure
+        <% end %> 
+        and you 
+        <% if @answer_set.procedure_planned == 1 %>
+            do smoke.
+        <% else %>
+            don't smoke.
+        <% end %> 
+    </p>
+</div>
+
+<%= link_to "Get Recommendations", {controller: "main", action: "recommendations", id: @answer_set.id}, {class: "btn btn-active btn-lg"}%>
+

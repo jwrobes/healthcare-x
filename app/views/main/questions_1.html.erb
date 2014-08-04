@@ -1,41 +1,30 @@
-<div class="questions">
-    <%= form_tag("/main/post_answers_1", method: "post", class: "form-group") do %>
+
+<%= form_tag("/main/post_answers_1", method: "post", id: "nl-form", class: "nl-form") do %>
         <input type="hidden" name="id" value="<%= @answer_set.id %>">
 
-        <p>
-            I am a
-            <select name="gender">
-                <option>male</option>
-                <option>female</option>
-            </select>, age <%= text_field_tag :age %>.
-        </p>
-
-        <p>
-            I am
-            <select name="marital_status">
-                <option value="single">single</option>
-                <option value="married">married</option>
-            </select>.
-        </p>
-
-        <p>
-            I getting insurance for
-            <%= select_tag("scope", options_for_select(
-                    [['Individual', '1'],
-                     ['Family', '2']], '1')) %>
-        </p>
-
-        <p>
-            I
-            <select name="smoker">
-                <option value="0">don't smoke</option>
-                <option value="1">smoke</option>
-            </select>.
-        </p>
-
-        <p>
-            <%= submit_tag "Continue", class: "btn btn-default btn-lg" %>
-        </p>
+        I'm a
+        <input type="text" value="" placeholder="age" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>" name="age"style="width: 2em"/>
+        year old
+        <select name="gender">
+            <option value="male" selected>man</option>
+            <option value="female">woman</option>
+        </select>
+        living in 
+        <input type="text" placeholder="zip_code" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>" name="zipcode" style="width: 5em"/>.
+        I am
+        <select name="marital_status">
+            <option value = "married"selected>married</option>
+            <option value="single">single</option>
+        </select>
+        and I am getting insurance for 
+       <select name="scope">
+            <option value="1" selected>an individual</option>
+            <option value="2" >a family</option>
+        </select>
+        <div class="nl-submit-wrap">
+        <br/>
+            <button class="nl-submit" type="submit">Next Question</button>
+        </div>
+        <div class="nl-overlay"></div>
     <% end %>
-</div>
- 
+

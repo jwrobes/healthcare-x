@@ -1,0 +1,24 @@
+
+<%= form_tag("/main/post_answers_4", method: "post", id: "nl-form", class: "nl-form") do %>
+    <input type="hidden" name="id" value="<%= @answer_set.id %>">
+      I have
+        <select name="illness">
+            <option value="1" selected>an ongoing illness</option>
+            <option value="0">no ongoing illness</option>
+        </select>
+        and usually see a doctor 
+        <select name="number_of_visits">
+            <option value ="0">0</option>
+            <option value ="1">1</option>
+            <option value ="2">2</option>
+            <option value ="3">3</option>
+            <option value ="4">4</option>
+            <option value ="5">5</option>
+            <option value ="6">6</option>
+        </select>
+        times per year.
+        <div class="nl-submit-wrap">
+            <button class="nl-submit" type="submit">Next Questions</button>
+        </div>
+        <div class="nl-overlay"></div>
+    <% end %>

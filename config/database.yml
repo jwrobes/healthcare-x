@@ -1,8 +1,8 @@
 development:
   adapter: postgresql
   host: localhost
-  username: postgres
-  password: 123456
+  username: 
+  password: 
   database: healthcare-x_dev
   pool: 5
   timeout: 5000
@@ -13,8 +13,8 @@ development:
 test:
   adapter: postgresql
   host: localhost
-  username: postgres
-  password: 123456
+  username: 
+  password: 
   database: healthcare-x_test
   pool: 5
   timeout: 5000
@@ -22,8 +22,8 @@ test:
 production:
   adapter: postgresql
   host: localhost
-  username: postgres
-  password: 123456
+  username: 
+  password: 
   database: healthcare-x
   pool: 5
   timeout: 5000

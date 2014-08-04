@@ -1,0 +1,20 @@
+
+<%= form_tag("/main/post_answers_3", method: "post", id: "nl-form", class: "nl-form") do %>
+        <input type="hidden" name="id" value="<%= @answer_set.id %>">
+        I have
+        <select name="preferred_doctor">
+            <option value="1" selected>one favorite doctor</option>
+            <option value="0">no preferred doctor</option>
+        </select>
+        and I take 
+        <select name="number_of_prescription_drugs">
+            <option value="1" selected>1 prescription drug</option>
+            <option value="0">no prescription drugs</option>
+        </select>
+        .
+        <div class="nl-submit-wrap">
+            <button class="nl-submit" type="submit">Next Question</button>
+        </div>
+        <div class="nl-overlay"></div>
+    <% end %>
+

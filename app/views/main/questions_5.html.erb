@@ -1,0 +1,18 @@
+
+<%= form_tag("/main/post_answers_5", method: "post", id: "nl-form", class: "nl-form") do %>
+    <input type="hidden" name="id" value="<%= @answer_set.id %>">   
+        I'm
+        <select name="illness">
+            <option value="1" selected>planning to get a procedure</option>
+            <option value="0">not planning to get a procedure</option>
+        </select>
+        and I 
+        <select style = "width: 6em"  name="smoker">
+            <option value="1" selected>do smoke</option>
+            <option value="0">don't smoke</option>
+        </select>
+        <div class="nl-submit-wrap">
+            <button class="nl-submit" type="submit">Submit Questions</button>
+        </div>
+        <div class="nl-overlay"></div>
+    <% end %>
