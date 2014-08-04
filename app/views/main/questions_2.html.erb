@@ -2,11 +2,11 @@
 <%= form_tag("/main/post_answers_2", method: "post", id: "nl-form", class: "nl-form") do %>
         <input type="hidden" name="id" value="<%= @answer_set.id %>">
         I have an estimated annual household income of 
-        <input type="text" value="70000" placeholder="income" name="household_income" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>" style="width: 3.5em"/>
+        <input type="text" placeholder="income" name="household_income" data-subline="For example: <em>Los Angeles</em> or <em>New York</em>" style="width: 3.5em"/>
         .
         <div class="nl-submit-wrap">
         <br/>
-            <button class="btn btn-default btn-lg" style ="color: #F49F24;" type="submit">Next Question</button>
+            <button class="nl-submit" type="submit">Next Question &nbsp;</button>
         </div>
         <div class="nl-overlay"></div>
     <% end %>   
