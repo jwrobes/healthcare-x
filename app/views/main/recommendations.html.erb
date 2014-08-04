@@ -1,6 +1,6 @@
-<div>
-    <h2>Your Recommendations</h2>
-</div>
+
+    <h2 id="rec_top">Your Recommendations</h2>
+
 <div class="row" style="background: #eee; margin-bottom: 20px">
     <div class="col-md-6 col-sm-6">
         <h4>Based on family status: <%= @answer_set.marital_status %></h4>
@@ -9,7 +9,7 @@
     </div>
 </div>
 
-<div class="row">
+<div class="row recommendations">
     <% @score_tuples.each do |score_tuple| %>
         <div class="panel panel-default plan-name" style="border: 1px solid darkblue">
             <div class="panel-heading">
@@ -29,7 +29,7 @@
                     </div>
                     <div class="col-md-4 col-sm-4" style="font-weight: bold">
                         True Total Cost of Care:
-                        <span class="active">$<%= number_to_currency(score_tuple[0], precision: 0) %></span>
+                        <span class="active true_cost"><%= number_to_currency(score_tuple[0], precision: 0) %></span>
                     </div>
                 </div>
             </div>
