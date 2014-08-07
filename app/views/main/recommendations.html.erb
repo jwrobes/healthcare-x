@@ -23,15 +23,40 @@
                         Monthly Premium:
                         <span class="active">
                             <% if @answer_set.marital_status == 'single' %>
-                              <%= score_tuple[1].premium_adult_individual_age_27 %>
+                              <%= number_to_currency(score_tuple[1].premium_adult_individual_age_27, precision: 2) %>
                             <% end %>
                             <% if @answer_set.marital_status == 'married' %>
-                              <%= score_tuple[1].premium_family_age_30 %>
+                              <%= number_to_currency(score_tuple[1].premium_family_age_30, precision: 2) %>
                             <% end %>
                         </span>
+                        <br/>
+                        Co-Pay:
+                        <span class="active">
+                            <%= number_to_currency(20.0, precision: 2) %>
+                        </span>
                     </div>
-                    <div class="col-md-4 col-sm-4" style="font-weight: bold">
-                        Max Out of Pocket:
+                    <div class="col-md-5 col-sm-5" style="font-weight: bold">
+                        Medical Deductable:
+                        <span class="active">
+                            <% if @answer_set.marital_status == 'single' %>
+                              <%= number_to_currency(score_tuple[1].medical_deductable_individual_in_network || 0.0, precision: 0) %>
+                            <% end %>
+                            <% if @answer_set.marital_status == 'married' %>
+                              <%= number_to_currency(score_tuple[1].medical_deductable_family_in_network || 0.0, precision: 0) %>
+                            <% end %>
+                        </span>
+                        <br/>
+                        Prescription Drugs Deductable:
+                        <span class="active">
+                            <% if @answer_set.marital_status == 'single' %>
+                                <%= number_to_currency(score_tuple[1].drug_deductable_individual_in_network || 0.0, precision: 0) %>
+                            <% end %>
+                            <% if @answer_set.marital_status == 'married' %>
+                               <%= number_to_currency(score_tuple[1].drug_deductable_family_in_network || 0.0, precision: 0) %>
+                            <% end %>
+                        </span>
+                        <br/>
+                        Annual Max Out of Pocket:
                         <span class="active">
                             <% if @answer_set.marital_status == 'single' %>
                               <%= number_to_currency(score_tuple[1].medical_maximum_out_of_pocket_individual_in_network, precision: 0) %>
@@ -41,7 +66,7 @@
                             <% end %>
                         </span>
                     </div>
-                    <div class="col-md-4 col-sm-4" style="font-weight: bold">
+                    <div class="col-md-3 col-sm-3" style="font-weight: bold">
                         True Total Cost of Care:
                         <span class="active true_cost"><%= number_to_currency(score_tuple[0], precision: 0) %></span>
                     </div>

@@ -1,27 +1,27 @@
 .questions {
-	margin: 10px;
-	padding: 20px;
+    margin: 10px;
+    padding: 20px;
 }
 
 .questions, p {
-	font-size: 1.2em;
-	margin: 10px;
+    font-size: 1.2em;
+    margin: 10px;
 }
 
 .result, p {
-	font-size: 1.4em;
-	color: #19818D;
+    font-size: 1.4em;
+    color: #19818D;
 }
 
 .recommendations {
-	font-size: 1.5em;
+    font-size: 1.5em;
 }
 
 .true_cost {
-	font-size: 1.5em;
-	font-weight: 600;
+    font-size: 1.9em;
+    font-weight: 600;
 }
 
 #rec_top {
-	margin-top: 4px;
+    margin-top: 4px;
 }
