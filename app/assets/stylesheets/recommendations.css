@@ -1,4 +1,8 @@
- .plan-name h4 {
-	color: #19818D;
-	font-weight: 600;
+.plan-name h4 {
+    color: #19818D;
+    font-weight: 600;
+}
+
+.recommendations {
+    margin-bottom: 25px;
 }
